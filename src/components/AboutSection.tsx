@@ -5,23 +5,23 @@ const AboutSection = () => {
   const advantages = [
     {
       icon: Award,
-      title: 'Dual AWS Cloud Security Competencies',
-      description: 'The only company in Brazil with two AWS cloud security competencies, ensuring unmatched expertise.',
+      title: 'Dupla Competência AWS Cloud Security',
+      description: 'A única empresa no Brasil com duas competências de segurança na nuvem AWS, garantindo expertise incomparável.',
     },
     {
       icon: Globe,
-      title: 'Modern Environment Focus',
-      description: 'Specialized in serverless, containers, and cloud-native security solutions for contemporary businesses.',
+      title: 'Foco em Ambientes Modernos',
+      description: 'Especializada em soluções de segurança serverless, containers e cloud-native para empresas contemporâneas.',
     },
     {
       icon: Users,
-      title: 'Darede Group Partnership',
-      description: 'Part of the Darede Group, AWS LATAM leader, bringing regional expertise and global standards.',
+      title: 'Parceria Grupo Darede',
+      description: 'Parte do Grupo Darede, líder AWS LATAM, trazendo expertise regional e padrões globais.',
     },
     {
       icon: CheckCircle,
-      title: 'Global Security Partnerships',
-      description: 'Strategic partnerships with industry leaders like Fortinet and CrowdStrike for comprehensive protection.',
+      title: 'Parcerias Globais de Segurança',
+      description: 'Parcerias estratégicas com líderes da indústria como Fortinet e CrowdStrike para proteção abrangente.',
     },
   ];
 
@@ -30,37 +30,37 @@ const AboutSection = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16 fade-in-up animate">
-          <h2 className="text-display mb-6">About SecOffice</h2>
+          <h2 className="text-display mb-6">Sobre a SecOffice</h2>
           <p className="text-subheading text-muted-foreground max-w-3xl mx-auto">
-            Leading cybersecurity innovation with decades of combined expertise, 
-            modern solutions, and unwavering commitment to protecting your digital assets.
+            Liderando a inovação em cibersegurança com décadas de expertise combinada, 
+            soluções modernas e compromisso inabalável em proteger seus ativos digitais.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Company Story */}
           <div className="fade-in-up animate" style={{ animationDelay: '0.2s' }}>
-            <h3 className="text-heading mb-6">Our Evolution</h3>
+            <h3 className="text-heading mb-6">Nossa Evolução</h3>
             <p className="text-body mb-6">
-              SecOffice emerged from the growing need for specialized cybersecurity solutions 
-              in an increasingly complex digital landscape. Founded on the principles of innovation, 
-              expertise, and unwavering commitment to security excellence.
+              A SecOffice surgiu da crescente necessidade de soluções de cibersegurança especializadas 
+              em um cenário digital cada vez mais complexo. Fundada nos princípios de inovação, 
+              expertise e compromisso inabalável com a excelência em segurança.
             </p>
             <p className="text-body mb-8">
-              Our journey began with a vision to bridge the gap between traditional security 
-              approaches and modern cloud-native environments. Today, we stand as Brazil's 
-              premier cybersecurity partner, trusted by organizations across industries.
+              Nossa jornada começou com a visão de preencher a lacuna entre abordagens tradicionais 
+              de segurança e ambientes modernos cloud-native. Hoje, somos o principal parceiro de 
+              cibersegurança do Brasil, confiado por organizações de diversos setores.
             </p>
 
             {/* Company Stats */}
             <div className="grid grid-cols-2 gap-6">
               <div className="text-center p-4 glass rounded-lg">
                 <div className="text-3xl font-bold text-primary mb-2">100+</div>
-                <div className="text-sm text-muted-foreground">Protected Clients</div>
+                <div className="text-sm text-muted-foreground">Clientes Protegidos</div>
               </div>
               <div className="text-center p-4 glass rounded-lg">
                 <div className="text-3xl font-bold text-primary mb-2">24/7</div>
-                <div className="text-sm text-muted-foreground">SOC Monitoring</div>
+                <div className="text-sm text-muted-foreground">Monitoramento SOC</div>
               </div>
             </div>
           </div>
@@ -75,8 +75,8 @@ const AboutSection = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               <div className="absolute bottom-6 left-6 text-white">
-                <h4 className="text-xl font-semibold mb-2">Expert Security Team</h4>
-                <p className="text-sm opacity-90">Dedicated professionals protecting your digital assets</p>
+                <h4 className="text-xl font-semibold mb-2">Equipe Especialista em Segurança</h4>
+                <p className="text-sm opacity-90">Profissionais dedicados protegendo seus ativos digitais</p>
               </div>
             </div>
           </div>
@@ -84,7 +84,7 @@ const AboutSection = () => {
 
         {/* Competitive Advantages */}
         <div className="mt-20">
-          <h3 className="text-heading text-center mb-12 fade-in-up animate">Why SecOffice</h3>
+          <h3 className="text-heading text-center mb-12 fade-in-up animate">Por que SecOffice</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {advantages.map((advantage, index) => {
               const Icon = advantage.icon;

@@ -8,51 +8,51 @@ const SolutionsSection = () => {
     {
       icon: Clock,
       title: 'SOC 24x7',
-      description: 'Continuous monitoring and incident response with our state-of-the-art Security Operations Center.',
+      description: 'Monitoramento contínuo e resposta a incidentes com nosso Centro de Operações de Segurança de última geração.',
       details: [
-        'Real-time threat detection and analysis',
-        'Immediate incident response and containment',
-        'Continuous vulnerability assessment',
-        'Detailed reporting and compliance support',
+        'Detecção e análise de ameaças em tempo real',
+        'Resposta imediata a incidentes e contenção',
+        'Avaliação contínua de vulnerabilidades',
+        'Relatórios detalhados e suporte à conformidade',
       ],
       image: socMonitoring,
       color: 'text-blue-500',
     },
     {
       icon: Shield,
-      title: 'Firewall Deployment',
-      description: 'Complete firewall setup, security rule configuration, and managed operations for robust network protection.',
+      title: 'Implantação de Firewall',
+      description: 'Configuração completa de firewall, configuração de regras de segurança e operações gerenciadas para proteção robusta da rede.',
       details: [
-        'Next-generation firewall implementation',
-        'Custom security policy development',
-        'Ongoing rule optimization and management',
-        'Performance monitoring and maintenance',
+        'Implementação de firewall de próxima geração',
+        'Desenvolvimento de políticas de segurança personalizadas',
+        'Otimização e gerenciamento contínuo de regras',
+        'Monitoramento de desempenho e manutenção',
       ],
       image: cloudSecurity,
       color: 'text-green-500',
     },
     {
       icon: Search,
-      title: 'Penetration Testing',
-      description: 'Comprehensive security assessments to identify vulnerabilities in systems, networks, and applications.',
+      title: 'Teste de Penetração',
+      description: 'Avaliações abrangentes de segurança para identificar vulnerabilidades em sistemas, redes e aplicações.',
       details: [
-        'Web application security testing',
-        'Network infrastructure assessment',
-        'Social engineering evaluation',
-        'Detailed vulnerability reporting',
+        'Testes de segurança de aplicações web',
+        'Avaliação de infraestrutura de rede',
+        'Avaliação de engenharia social',
+        'Relatórios detalhados de vulnerabilidades',
       ],
       image: pentestImg,
       color: 'text-red-500',
     },
     {
       icon: Cog,
-      title: 'Custom Security Solutions',
-      description: 'Tailored security implementations designed to meet your specific business requirements and compliance needs.',
+      title: 'Soluções de Segurança Personalizadas',
+      description: 'Implementações de segurança sob medida projetadas para atender aos seus requisitos específicos de negócios e conformidade.',
       details: [
-        'Business-specific security architecture',
-        'Compliance framework implementation',
-        'Integration with existing systems',
-        'Scalable security infrastructure',
+        'Arquitetura de segurança específica do negócio',
+        'Implementação de estrutura de conformidade',
+        'Integração com sistemas existentes',
+        'Infraestrutura de segurança escalável',
       ],
       image: cloudSecurity,
       color: 'text-purple-500',
@@ -64,10 +64,10 @@ const SolutionsSection = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16 fade-in-up animate">
-          <h2 className="text-display mb-6">Solutions</h2>
+          <h2 className="text-display mb-6">Soluções</h2>
           <p className="text-subheading text-muted-foreground max-w-3xl mx-auto">
-            Practical cybersecurity solutions that directly apply SecOffice products 
-            to protect and enhance your digital infrastructure.
+            Soluções práticas de cibersegurança que aplicam diretamente os produtos da SecOffice 
+            para proteger e aprimorar sua infraestrutura digital.
           </p>
         </div>
 
@@ -114,7 +114,7 @@ const SolutionsSection = () => {
                   {/* Action Button */}
                   <div className="mt-6 pt-6 border-t border-border">
                     <button className="text-primary font-medium hover:text-primary-hover transition-colors duration-300 red-line">
-                      Explore Solution
+                      Explorar Solução
                     </button>
                   </div>
                 </div>
@@ -126,13 +126,13 @@ const SolutionsSection = () => {
         {/* Additional Solutions CTA */}
         <div className="text-center mt-16 fade-in-up animate" style={{ animationDelay: '0.4s' }}>
           <div className="glass rounded-2xl p-8 max-w-2xl mx-auto">
-            <h3 className="text-heading mb-4">Need a Custom Solution?</h3>
+            <h3 className="text-heading mb-4">Precisa de uma Solução Personalizada?</h3>
             <p className="text-muted-foreground mb-6">
-              Our experts can design and implement tailored security solutions 
-              that perfectly align with your business requirements and risk profile.
+              Nossos especialistas podem projetar e implementar soluções de segurança sob medida 
+              que se alinham perfeitamente aos seus requisitos de negócios e perfil de risco.
             </p>
             <button className="btn-hero">
-              Schedule Consultation
+              Agendar Consultoria
             </button>
           </div>
         </div>

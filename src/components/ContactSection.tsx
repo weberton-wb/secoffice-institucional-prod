@@ -27,19 +27,19 @@ const ContactSection = () => {
   const contactInfo = [
     {
       icon: MapPin,
-      title: 'Address',
-      details: ['Alameda Araguaia, 2044', 'Alphaville, Barueri/SP', 'Brazil'],
+      title: 'Endereço',
+      details: ['Alameda Araguaia, 2044', 'Alphaville, Barueri/SP', 'Brasil'],
       color: 'text-blue-500',
     },
     {
       icon: Phone,
-      title: 'Phone',
+      title: 'Telefone',
       details: ['+55 (11) 3900-1010'],
       color: 'text-green-500',
     },
     {
       icon: Mail,
-      title: 'Email',
+      title: 'E-mail',
       details: ['comercial@secoffice.com.br'],
       color: 'text-red-500',
     },
@@ -52,13 +52,13 @@ const ContactSection = () => {
   ];
 
   const subjects = [
-    'General Inquiry',
+    'Consulta Geral',
     'SECaaS - Security as a Service',
-    'MSSP - Managed Security Services',
-    'SRT - Emergency Response',
-    'Penetration Testing',
-    'Partner Solutions',
-    'Custom Security Solution',
+    'MSSP - Serviços de Segurança Gerenciados',
+    'SRT - Resposta de Emergência',
+    'Teste de Penetração',
+    'Soluções Parceiras',
+    'Solução de Segurança Personalizada',
   ];
 
   return (
@@ -66,10 +66,10 @@ const ContactSection = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16 fade-in-up animate">
-          <h2 className="text-display mb-6">Contact Us</h2>
+          <h2 className="text-display mb-6">Entre em Contato</h2>
           <p className="text-subheading text-muted-foreground max-w-3xl mx-auto">
-            Ready to strengthen your cybersecurity posture? 
-            Get in touch with our experts for a personalized security consultation.
+            Pronto para fortalecer sua postura de cibersegurança? 
+            Entre em contato com nossos especialistas para uma consultoria personalizada de segurança.
           </p>
         </div>
 
@@ -77,7 +77,7 @@ const ContactSection = () => {
           {/* Contact Information */}
           <div className="lg:col-span-1 space-y-8 fade-in-up animate" style={{ animationDelay: '0.2s' }}>
             <div className="glass rounded-2xl p-6">
-              <h3 className="text-heading mb-6">Get in Touch</h3>
+              <h3 className="text-heading mb-6">Entre em Contato</h3>
               
               {contactInfo.map((info, index) => {
                 const Icon = info.icon;
@@ -101,7 +101,7 @@ const ContactSection = () => {
 
             {/* Map Placeholder */}
             <div className="glass rounded-2xl p-6">
-              <h4 className="font-semibold mb-4">Our Location</h4>
+              <h4 className="font-semibold mb-4">Nossa Localização</h4>
               <div className="h-48 bg-gradient-subtle rounded-lg flex items-center justify-center">
                 <div className="text-center">
                   <MapPin className="w-12 h-12 text-primary mx-auto mb-2" />
@@ -114,14 +114,14 @@ const ContactSection = () => {
           {/* Contact Form */}
           <div className="lg:col-span-2 fade-in-up animate" style={{ animationDelay: '0.4s' }}>
             <div className="glass rounded-2xl p-8">
-              <h3 className="text-heading mb-6">Send us a Message</h3>
+              <h3 className="text-heading mb-6">Envie-nos uma Mensagem</h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name and Email Row */}
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-2">
-                      Full Name *
+                      Nome Completo *
                     </label>
                     <input
                       type="text"
@@ -131,12 +131,12 @@ const ContactSection = () => {
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
-                      placeholder="Your full name"
+                      placeholder="Seu nome completo"
                     />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium mb-2">
-                      Email Address *
+                      Endereço de E-mail *
                     </label>
                     <input
                       type="email"
@@ -146,7 +146,7 @@ const ContactSection = () => {
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
-                      placeholder="your@email.com"
+                      placeholder="seu@email.com"
                     />
                   </div>
                 </div>
@@ -155,7 +155,7 @@ const ContactSection = () => {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium mb-2">
-                      Company
+                      Empresa
                     </label>
                     <input
                       type="text"
@@ -164,12 +164,12 @@ const ContactSection = () => {
                       value={formData.company}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
-                      placeholder="Your company name"
+                      placeholder="Nome da sua empresa"
                     />
                   </div>
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium mb-2">
-                      Phone Number
+                      Número de Telefone
                     </label>
                     <input
                       type="tel"
@@ -186,7 +186,7 @@ const ContactSection = () => {
                 {/* Subject */}
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                    Subject *
+                    Assunto *
                   </label>
                   <select
                     id="subject"
@@ -196,7 +196,7 @@ const ContactSection = () => {
                     required
                     className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
                   >
-                    <option value="">Select a subject</option>
+                    <option value="">Selecione um assunto</option>
                     {subjects.map((subject, index) => (
                       <option key={index} value={subject}>
                         {subject}
@@ -208,7 +208,7 @@ const ContactSection = () => {
                 {/* Message */}
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium mb-2">
-                    Message *
+                    Mensagem *
                   </label>
                   <textarea
                     id="message"
@@ -218,7 +218,7 @@ const ContactSection = () => {
                     required
                     rows={6}
                     className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 resize-vertical"
-                    placeholder="Tell us about your security needs and how we can help..."
+                    placeholder="Conte-nos sobre suas necessidades de segurança e como podemos ajudar..."
                   />
                 </div>
 
@@ -228,7 +228,7 @@ const ContactSection = () => {
                     type="submit"
                     className="btn-hero group"
                   >
-                    Send Message
+                    Enviar Mensagem
                     <Send className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
                   </button>
                 </div>
@@ -240,17 +240,17 @@ const ContactSection = () => {
         {/* Quick Contact CTA */}
         <div className="text-center mt-16 fade-in-up animate" style={{ animationDelay: '0.6s' }}>
           <div className="glass rounded-2xl p-8 max-w-2xl mx-auto">
-            <h3 className="text-heading mb-4">Need Immediate Assistance?</h3>
+            <h3 className="text-heading mb-4">Precisa de Assistência Imediata?</h3>
             <p className="text-muted-foreground mb-6">
-              For urgent security incidents or immediate consultation needs, 
-              contact our emergency response team directly.
+              Para incidentes de segurança urgentes ou necessidades de consultoria imediata, 
+              entre em contato diretamente com nossa equipe de resposta de emergência.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-hero">
-                Emergency Hotline
+                Linha de Emergência
               </button>
               <button className="btn-ghost">
-                Schedule Consultation
+                Agendar Consultoria
               </button>
             </div>
           </div>

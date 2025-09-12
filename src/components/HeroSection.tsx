@@ -35,28 +35,27 @@ const HeroSection = () => {
         <div className="max-w-5xl mx-auto">
           {/* Main Headline */}
           <h1 className="text-hero text-white mb-8 fade-in-up animate">
-            Protect your business with{' '}
+            Proteja seu negócio com{' '}
             <span className="bg-gradient-brand bg-clip-text text-transparent">
-              modern and innovative
-            </span>{' '}
-            security
+              segurança moderna e inovadora
+            </span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-subheading text-gray-300 mb-12 max-w-3xl mx-auto fade-in-up animate" style={{ animationDelay: '0.2s' }}>
-            SecOffice delivers cutting-edge cybersecurity solutions with unmatched expertise in cloud security, 
-            managed services, and incident response for modern digital environments.
+            A SecOffice oferece soluções de cibersegurança de ponta com expertise incomparável em segurança na nuvem, 
+            serviços gerenciados e resposta a incidentes para ambientes digitais modernos.
           </p>
 
           {/* Key Differentiators */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 fade-in-up animate" style={{ animationDelay: '0.4s' }}>
             <div className="glass rounded-lg p-4 text-center">
               <Cloud className="w-8 h-8 text-primary mx-auto mb-2" />
-              <p className="text-sm font-medium text-white">AWS Cloud Expert</p>
+              <p className="text-sm font-medium text-white">Especialista AWS Cloud</p>
             </div>
             <div className="glass rounded-lg p-4 text-center">
               <Shield className="w-8 h-8 text-primary mx-auto mb-2" />
-              <p className="text-sm font-medium text-white">Fortinet Partner</p>
+              <p className="text-sm font-medium text-white">Parceiro Fortinet</p>
             </div>
             <div className="glass rounded-lg p-4 text-center">
               <Zap className="w-8 h-8 text-primary mx-auto mb-2" />
@@ -64,7 +63,7 @@ const HeroSection = () => {
             </div>
             <div className="glass rounded-lg p-4 text-center">
               <Users className="w-8 h-8 text-primary mx-auto mb-2" />
-              <p className="text-sm font-medium text-white">Managed SOC</p>
+              <p className="text-sm font-medium text-white">SOC Gerenciado</p>
             </div>
           </div>
 
@@ -74,14 +73,14 @@ const HeroSection = () => {
               onClick={() => scrollToSection('contact')}
               className="btn-hero group"
             >
-              Talk to an Expert
+              Fale com um Especialista
               <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
             </button>
             <button
               onClick={() => scrollToSection('solutions')}
               className="btn-ghost"
             >
-              Discover our Solutions
+              Descubra nossas Soluções
             </button>
           </div>
         </div>

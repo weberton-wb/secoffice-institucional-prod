@@ -4,21 +4,21 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About Us', href: '#about' },
-    { name: 'Products', href: '#products' },
-    { name: 'Solutions', href: '#solutions' },
-    { name: 'Partners', href: '#partners' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Início', href: '#home' },
+    { name: 'Sobre Nós', href: '#about' },
+    { name: 'Produtos', href: '#products' },
+    { name: 'Soluções', href: '#solutions' },
+    { name: 'Parceiros', href: '#partners' },
+    { name: 'Contato', href: '#contact' },
   ];
 
   const services = [
     'SECaaS - Security as a Service',
-    'MSSP - Managed Security Services',
-    'SRT - Emergency Response',
-    'Penetration Testing',
-    'Firewall Management',
-    'SOC 24/7 Monitoring',
+    'MSSP - Serviços de Segurança Gerenciados',
+    'SRT - Resposta de Emergência',
+    'Teste de Penetração',
+    'Gerenciamento de Firewall',
+    'Monitoramento SOC 24/7',
   ];
 
   const scrollToSection = (sectionId: string) => {
@@ -43,8 +43,8 @@ const Footer = () => {
                 Sec<span className="text-primary">Office</span>
               </div>
               <p className="text-accent-foreground/80 mb-6 leading-relaxed">
-                Leading cybersecurity solutions with modern approaches to digital protection. 
-                Trusted by businesses across Brazil for comprehensive security services.
+                Soluções líderes em cibersegurança com abordagens modernas para proteção digital. 
+                Confiado por empresas em todo o Brasil para serviços abrangentes de segurança.
               </p>
               <div className="flex space-x-4">
                 <a
@@ -60,7 +60,7 @@ const Footer = () => {
 
             {/* Quick Links */}
             <div>
-              <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
+              <h3 className="text-lg font-semibold mb-6">Links Rápidos</h3>
               <div className="space-y-3">
                 {quickLinks.map((link, index) => (
                   <button
@@ -76,7 +76,7 @@ const Footer = () => {
 
             {/* Services */}
             <div>
-              <h3 className="text-lg font-semibold mb-6">Our Services</h3>
+              <h3 className="text-lg font-semibold mb-6">Nossos Serviços</h3>
               <div className="space-y-3">
                 {services.map((service, index) => (
                   <div key={index} className="text-accent-foreground/80 text-sm">
@@ -88,14 +88,14 @@ const Footer = () => {
 
             {/* Contact Info */}
             <div>
-              <h3 className="text-lg font-semibold mb-6">Contact Info</h3>
+              <h3 className="text-lg font-semibold mb-6">Informações de Contato</h3>
               <div className="space-y-4">
                 <div className="flex items-start">
                   <MapPin className="w-5 h-5 text-primary mt-1 mr-3 flex-shrink-0" />
                   <div className="text-accent-foreground/80 text-sm">
                     <div>Alameda Araguaia, 2044</div>
                     <div>Alphaville, Barueri/SP</div>
-                    <div>Brazil</div>
+                    <div>Brasil</div>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -115,17 +115,17 @@ const Footer = () => {
         <div className="border-t border-accent-foreground/10 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-accent-foreground/60 text-sm mb-4 md:mb-0">
-              © {currentYear} SecOffice. All rights reserved.
+              © {currentYear} SecOffice. Todos os direitos reservados.
             </div>
             <div className="flex space-x-6 text-sm">
               <button className="text-accent-foreground/60 hover:text-primary transition-colors duration-300">
-                Privacy Policy
+                Política de Privacidade
               </button>
               <button className="text-accent-foreground/60 hover:text-primary transition-colors duration-300">
-                Terms of Service
+                Termos de Serviço
               </button>
               <button className="text-accent-foreground/60 hover:text-primary transition-colors duration-300">
-                Cookie Policy
+                Política de Cookies
               </button>
             </div>
           </div>

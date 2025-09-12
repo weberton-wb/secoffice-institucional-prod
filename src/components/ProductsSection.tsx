@@ -9,8 +9,8 @@ const ProductsSection = () => {
       icon: Shield,
       title: 'SECaaS',
       subtitle: 'Security as a Service',
-      description: 'On-demand security services with flexible, hourly-based pricing. Scale your security needs without fixed costs.',
-      features: ['Pay-per-use model', 'Instant deployment', 'Expert consultation', 'Flexible scaling'],
+      description: 'Serviços de segurança sob demanda com preços flexíveis por hora. Escale suas necessidades de segurança sem custos fixos.',
+      features: ['Modelo pay-per-use', 'Implantação instantânea', 'Consultoria especializada', 'Escalabilidade flexível'],
       image: socMonitoring,
       gradient: 'from-blue-500/20 to-cyan-500/20',
     },
@@ -18,8 +18,8 @@ const ProductsSection = () => {
       icon: Monitor,
       title: 'MSSP',
       subtitle: 'Managed Security Services Provider',
-      description: 'Comprehensive managed SOC services with fixed pricing and continuous monitoring for complete peace of mind.',
-      features: ['24/7 SOC monitoring', 'Fixed monthly pricing', 'Threat detection', 'Incident response'],
+      description: 'Serviços SOC gerenciados abrangentes com preços fixos e monitoramento contínuo para total tranquilidade.',
+      features: ['Monitoramento SOC 24/7', 'Preços mensais fixos', 'Detecção de ameaças', 'Resposta a incidentes'],
       image: socMonitoring,
       gradient: 'from-purple-500/20 to-pink-500/20',
     },
@@ -27,26 +27,26 @@ const ProductsSection = () => {
       icon: Zap,
       title: 'SRT',
       subtitle: 'SecOffice Response Team',
-      description: 'Emergency incident response services - your "cyber 911" for immediate threat mitigation and recovery.',
-      features: ['Emergency response', 'Rapid deployment', 'Expert remediation', 'Recovery planning'],
+      description: 'Serviços de resposta a incidentes de emergência - seu "cyber 911" para mitigação imediata de ameaças e recuperação.',
+      features: ['Resposta de emergência', 'Implantação rápida', 'Remediação especializada', 'Planejamento de recuperação'],
       image: incidentResponse,
       gradient: 'from-red-500/20 to-orange-500/20',
     },
     {
       icon: Target,
-      title: 'Offensive Actions',
-      subtitle: 'Comprehensive Security Testing',
-      description: 'Penetration testing, attack surface assessment, and cloud risk evaluation to identify vulnerabilities.',
-      features: ['Penetration testing', 'Attack surface mapping', 'Cloud risk assessment', 'Vulnerability analysis'],
+      title: 'Ações Ofensivas',
+      subtitle: 'Testes Abrangentes de Segurança',
+      description: 'Testes de penetração, avaliação de superfície de ataque e avaliação de riscos na nuvem para identificar vulnerabilidades.',
+      features: ['Testes de penetração', 'Mapeamento de superfície de ataque', 'Avaliação de riscos na nuvem', 'Análise de vulnerabilidades'],
       image: pentestImg,
       gradient: 'from-green-500/20 to-emerald-500/20',
     },
     {
       icon: ShoppingCart,
       title: 'Re-Sell',
-      subtitle: 'Partner Solutions Catalog',
-      description: 'Complete Fortinet catalog and strategic partner offerings, providing integrated security solutions.',
-      features: ['Fortinet products', 'Partner solutions', 'Integrated deployment', 'Ongoing support'],
+      subtitle: 'Catálogo de Soluções Parceiras',
+      description: 'Catálogo completo Fortinet e ofertas de parceiros estratégicos, fornecendo soluções de segurança integradas.',
+      features: ['Produtos Fortinet', 'Soluções parceiras', 'Implantação integrada', 'Suporte contínuo'],
       image: socMonitoring,
       gradient: 'from-indigo-500/20 to-blue-500/20',
     },
@@ -57,10 +57,10 @@ const ProductsSection = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16 fade-in-up animate">
-          <h2 className="text-display mb-6">Our Products</h2>
+          <h2 className="text-display mb-6">Nossos Produtos</h2>
           <p className="text-subheading text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive cybersecurity solutions designed for modern businesses, 
-            from on-demand services to managed security operations.
+            Soluções abrangentes de cibersegurança projetadas para empresas modernas, 
+            desde serviços sob demanda até operações de segurança gerenciadas.
           </p>
         </div>
 
@@ -125,7 +125,7 @@ const ProductsSection = () => {
 
                   {/* CTA Button */}
                   <button className="btn-hero">
-                    Learn More
+                    Saiba Mais
                   </button>
                 </div>
               </div>

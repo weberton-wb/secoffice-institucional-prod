@@ -26,12 +26,12 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About Us' },
-    { id: 'products', label: 'Products' },
-    { id: 'solutions', label: 'Solutions' },
-    { id: 'partners', label: 'Partners' },
-    { id: 'contact', label: 'Contact' },
+    { id: 'home', label: 'Início' },
+    { id: 'about', label: 'Sobre Nós' },
+    { id: 'products', label: 'Produtos' },
+    { id: 'solutions', label: 'Soluções' },
+    { id: 'partners', label: 'Parceiros' },
+    { id: 'contact', label: 'Contato' },
   ];
 
   return (
@@ -68,7 +68,7 @@ const Navigation = () => {
               onClick={() => scrollToSection('contact')}
               className="btn-hero"
             >
-              Talk to an Expert
+              Fale com um Especialista
             </button>
           </div>
 
@@ -98,7 +98,7 @@ const Navigation = () => {
                 onClick={() => scrollToSection('contact')}
                 className="btn-hero mt-4"
               >
-                Talk to an Expert
+                Fale com um Especialista
               </button>
             </div>
           </div>

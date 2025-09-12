@@ -4,12 +4,12 @@ const PartnersSection = () => {
   const partners = [
     {
       name: 'Fortinet',
-      description: 'Advanced firewall, ZTNA, and SASE solutions',
+      description: 'Soluções avançadas de firewall, ZTNA e SASE',
       capabilities: [
-        'Next-Generation Firewalls',
-        'Zero Trust Network Access',
+        'Firewalls de Próxima Geração',
+        'Acesso de Rede Zero Trust',
         'Secure Access Service Edge',
-        'SD-WAN Security',
+        'Segurança SD-WAN',
       ],
       icon: Shield,
       color: 'from-red-500 to-orange-500',
@@ -17,11 +17,11 @@ const PartnersSection = () => {
     },
     {
       name: 'CrowdStrike',
-      description: 'Endpoint protection, XDR, and threat intelligence',
+      description: 'Proteção de endpoint, XDR e inteligência de ameaças',
       capabilities: [
         'Falcon Endpoint Protection',
         'Extended Detection & Response',
-        'Threat Intelligence Services',
+        'Serviços de Inteligência de Ameaças',
         'Cloud Security Posture',
       ],
       icon: Eye,
@@ -31,10 +31,10 @@ const PartnersSection = () => {
   ];
 
   const additionalPartners = [
-    { name: 'AWS', specialty: 'Cloud Security Architecture', icon: Cloud },
-    { name: 'Microsoft', specialty: 'Enterprise Security Solutions', icon: Shield },
-    { name: 'Palo Alto Networks', specialty: 'Network Security', icon: Shield },
-    { name: 'Splunk', specialty: 'Security Analytics', icon: Eye },
+    { name: 'AWS', specialty: 'Arquitetura de Segurança na Nuvem', icon: Cloud },
+    { name: 'Microsoft', specialty: 'Soluções Empresariais de Segurança', icon: Shield },
+    { name: 'Palo Alto Networks', specialty: 'Segurança de Rede', icon: Shield },
+    { name: 'Splunk', specialty: 'Analytics de Segurança', icon: Eye },
   ];
 
   return (
@@ -42,10 +42,10 @@ const PartnersSection = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16 fade-in-up animate">
-          <h2 className="text-display mb-6">Our Partners</h2>
+          <h2 className="text-display mb-6">Nossos Parceiros</h2>
           <p className="text-subheading text-muted-foreground max-w-3xl mx-auto">
-            Strategic partnerships with global security leaders, 
-            enabling us to deliver world-class cybersecurity solutions.
+            Parcerias estratégicas com líderes globais de segurança, 
+            permitindo-nos entregar soluções de cibersegurança de classe mundial.
           </p>
         </div>
 
@@ -72,7 +72,7 @@ const PartnersSection = () => {
 
                 {/* Capabilities */}
                 <div className="space-y-3">
-                  <h4 className="font-semibold text-lg mb-4">Key Capabilities</h4>
+                  <h4 className="font-semibold text-lg mb-4">Principais Capacidades</h4>
                   {partner.capabilities.map((capability, capIndex) => (
                     <div key={capIndex} className="flex items-center">
                       <div className="w-2 h-2 bg-primary rounded-full mr-4"></div>
@@ -85,8 +85,8 @@ const PartnersSection = () => {
                 <div className={`mt-6 p-4 rounded-lg ${partner.bgColor}`}>
                   <p className="text-sm font-medium text-center">
                     {partner.name === 'Fortinet' 
-                      ? 'Certified Partner with deep expertise in enterprise network security'
-                      : 'Elite Partner providing advanced endpoint protection and threat intelligence'
+                      ? 'Parceiro Certificado com profunda expertise em segurança de rede empresarial'
+                      : 'Parceiro Elite fornecendo proteção avançada de endpoint e inteligência de ameaças'
                     }
                   </p>
                 </div>
@@ -97,7 +97,7 @@ const PartnersSection = () => {
 
         {/* Additional Partners */}
         <div className="fade-in-up animate" style={{ animationDelay: '0.4s' }}>
-          <h3 className="text-heading text-center mb-8">Extended Partner Network</h3>
+          <h3 className="text-heading text-center mb-8">Rede Estendida de Parceiros</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {additionalPartners.map((partner, index) => {
               const Icon = partner.icon;
@@ -121,13 +121,13 @@ const PartnersSection = () => {
         <div className="text-center mt-16 fade-in-up animate" style={{ animationDelay: '0.6s' }}>
           <div className="glass rounded-2xl p-8 max-w-2xl mx-auto">
             <Award className="w-12 h-12 text-primary mx-auto mb-4" />
-            <h3 className="text-heading mb-4">Expanding Partnership Ecosystem</h3>
+            <h3 className="text-heading mb-4">Expandindo o Ecossistema de Parcerias</h3>
             <p className="text-muted-foreground mb-6">
-              We continuously evaluate and partner with emerging security leaders 
-              to bring you the most innovative and effective cybersecurity solutions.
+              Continuamente avaliamos e fazemos parcerias com líderes emergentes de segurança 
+              para trazer as soluções de cibersegurança mais inovadoras e eficazes.
             </p>
             <button className="btn-hero">
-              Partner With Us
+              Seja Nosso Parceiro
             </button>
           </div>
         </div>
