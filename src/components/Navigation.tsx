@@ -81,7 +81,7 @@ const Navigation = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
+          <div className="hidden md:block ml-8">
             <button
               onClick={() => scrollToSection('contact')}
               className="btn-hero text-sm px-4 py-2"
