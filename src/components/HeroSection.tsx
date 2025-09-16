@@ -28,7 +28,7 @@ const HeroSection = () => {
       animationDelay: '10s'
     }}></div>
 
-      <div className="container mx-auto px-6 text-center relative z-10">
+      <div className="container mx-auto px-6 text-center relative z-10 pt-24 md:pt-28">
         <div className="max-w-5xl mx-auto">
           {/* Main Headline */}
           <h1 className="text-hero text-white mb-8 fade-in-up animate">
