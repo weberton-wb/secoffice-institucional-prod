@@ -84,7 +84,7 @@ const Navigation = () => {
           <div className="hidden md:block">
             <button
               onClick={() => scrollToSection('contact')}
-              className="btn-hero"
+              className="btn-hero text-sm px-4 py-2"
             >
               Fale com um Especialista
             </button>
