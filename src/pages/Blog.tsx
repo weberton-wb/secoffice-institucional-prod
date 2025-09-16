@@ -30,10 +30,7 @@ const Blog = () => {
     try {
       const { data, error } = await supabase
         .from("blog_posts")
-        .select(`
-          *,
-          profiles (display_name)
-        `)
+        .select("*")
         .eq("published", true)
         .order("created_at", { ascending: false });
 
@@ -86,11 +83,6 @@ const Blog = () => {
                     <Badge variant="secondary">
                       {format(new Date(post.created_at), "dd/MM/yyyy", { locale: ptBR })}
                     </Badge>
-                    {post.profiles?.display_name && (
-                      <span className="text-sm text-muted-foreground">
-                        Por {post.profiles.display_name}
-                      </span>
-                    )}
                   </div>
                   <CardTitle className="line-clamp-2">{post.title}</CardTitle>
                   <CardDescription className="line-clamp-3">
