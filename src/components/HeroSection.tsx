@@ -1,5 +1,5 @@
 import { ArrowRight, Shield, Cloud, Users, Zap } from 'lucide-react';
-import heroBg from '@/assets/hero-bg.jpg';
+import heroBackground from '@/assets/hero-background.png';
 const HeroSection = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -11,9 +11,9 @@ const HeroSection = () => {
     }
   };
   return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(${heroBg})`,
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(${heroBackground})`,
     backgroundSize: 'cover',
-    backgroundPosition: 'center bottom',
+    backgroundPosition: 'center center',
     backgroundAttachment: 'fixed'
   }}>
       {/* Animated Hexagon Pattern */}
