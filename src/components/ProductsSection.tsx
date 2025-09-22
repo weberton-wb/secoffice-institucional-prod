@@ -1,4 +1,5 @@
 import { Shield, Monitor, Zap, Target, ShoppingCart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import socMonitoring from '@/assets/soc-monitoring.jpg';
 import pentestImg from '@/assets/pentest.jpg';
 import incidentResponse from '@/assets/incident-response.jpg';
@@ -124,9 +125,18 @@ const ProductsSection = () => {
                   </div>
 
                   {/* CTA Button */}
-                  <button className="btn-hero">
+                  <Link 
+                    to={
+                      product.title === 'SECaaS' ? '/SECaaS' :
+                      product.title === 'MSSP' ? '/MSSP' :
+                      product.title === 'SRT' ? '/SRT' :
+                      product.title === 'Ações Ofensivas' ? '/acoes-ofensivas' :
+                      product.title === 'Re-Sell' ? '/re-sell' : '/'
+                    }
+                    className="btn-hero inline-block text-center"
+                  >
                     Saiba Mais
-                  </button>
+                  </Link>
                 </div>
               </div>
             );

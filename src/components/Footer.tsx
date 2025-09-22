@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail, Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -78,11 +79,24 @@ const Footer = () => {
             <div>
               <h3 className="text-lg font-semibold mb-6">Nossos Serviços</h3>
               <div className="space-y-3">
-                {services.map((service, index) => (
-                  <div key={index} className="text-accent-foreground/80 text-sm">
-                    {service}
-                  </div>
-                ))}
+                <Link to="/SECaaS" className="block text-accent-foreground/80 hover:text-primary transition-colors duration-300 text-sm red-line">
+                  SECaaS - Security as a Service
+                </Link>
+                <Link to="/MSSP" className="block text-accent-foreground/80 hover:text-primary transition-colors duration-300 text-sm red-line">
+                  MSSP - Serviços de Segurança Gerenciados
+                </Link>
+                <Link to="/SRT" className="block text-accent-foreground/80 hover:text-primary transition-colors duration-300 text-sm red-line">
+                  SRT - Resposta de Emergência
+                </Link>
+                <Link to="/acoes-ofensivas" className="block text-accent-foreground/80 hover:text-primary transition-colors duration-300 text-sm red-line">
+                  Teste de Penetração
+                </Link>
+                <div className="text-accent-foreground/80 text-sm">
+                  Gerenciamento de Firewall
+                </div>
+                <div className="text-accent-foreground/80 text-sm">
+                  Monitoramento SOC 24/7
+                </div>
               </div>
             </div>
 

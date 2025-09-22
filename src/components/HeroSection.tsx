@@ -11,22 +11,13 @@ const HeroSection = () => {
     }
   };
   return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(${heroBackground})`,
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url(${heroBackground})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center center',
     backgroundAttachment: 'fixed'
   }}>
       {/* Animated Hexagon Pattern */}
-      <div className="absolute inset-0 hexagon-grid opacity-30"></div>
-      
-      {/* Floating Hexagons */}
-      <div className="absolute top-20 left-10 w-8 h-8 border-2 border-primary hexagon-float opacity-40"></div>
-      <div className="absolute top-40 right-20 w-6 h-6 border-2 border-primary hexagon-float opacity-30" style={{
-      animationDelay: '5s'
-    }}></div>
-      <div className="absolute bottom-40 left-20 w-10 h-10 border-2 border-primary hexagon-float opacity-20" style={{
-      animationDelay: '10s'
-    }}></div>
+      <div className="absolute inset-0 hexagon-grid opacity-20"></div>
 
       <div className="container mx-auto px-6 text-center relative z-10 pt-24 md:pt-28">
         <div className="max-w-5xl mx-auto">
