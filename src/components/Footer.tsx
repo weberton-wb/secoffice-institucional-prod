@@ -1,5 +1,6 @@
 import { MapPin, Phone, Mail, Linkedin } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import logo from '@/assets/secoffice-logo.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -40,9 +41,11 @@ const Footer = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Company Info */}
             <div className="lg:col-span-1">
-              <div className="text-2xl font-display font-bold mb-4">
-                Sec<span className="text-primary">Office</span>
-              </div>
+              <img 
+                src={logo} 
+                alt="SecOffice"
+                className="h-8 w-auto mb-4"
+              />
               <p className="text-accent-foreground/80 mb-6 leading-relaxed">
                 Soluções líderes em cibersegurança com abordagens modernas para proteção digital. 
                 Confiado por empresas em todo o Brasil para serviços abrangentes de segurança.
