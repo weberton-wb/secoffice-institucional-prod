@@ -23,6 +23,11 @@ const About = () => {
       description: 'Buscamos continuamente o mais alto nível de especialização e práticas modernas em segurança cibernética. Para nós, excelência não é uma meta distante — é o padrão diário que aplicamos em cada projeto, certificação e implementação. Investimos constantemente em capacitação e tecnologia de ponta.',
     },
     {
+      icon: Eye,
+      title: 'Responsabilidade Digital',
+      description: 'Protegemos negócios sabendo que por trás deles existem vidas, histórias e comunidades que dependem da tecnologia. Nossa responsabilidade vai além da proteção técnica: assumimos o compromisso de preservar a confiança digital que sustenta relacionamentos, inovações e o progresso da sociedade.',
+    },
+    {
       icon: Zap,
       title: 'Proatividade',
       description: 'Atuamos de forma preventiva, antecipando riscos e propondo soluções antes que problemas aconteçam. Nossa filosofia é estar sempre um passo à frente das ameaças, utilizando inteligência de mercado, análise preditiva e monitoramento contínuo para proteger nossos clientes.',
@@ -36,11 +41,6 @@ const About = () => {
       icon: Lightbulb,
       title: 'Inovação Contínua',
       description: 'Evoluímos junto com as transformações tecnológicas, aplicando inovação para transformar segurança em habilitador da inovação dos nossos clientes. Mantemos-nos na vanguarda das tendências tecnológicas, sempre explorando novas ferramentas e metodologias para oferecer soluções diferenciadas.',
-    },
-    {
-      icon: Eye,
-      title: 'Responsabilidade Digital',
-      description: 'Protegemos negócios sabendo que por trás deles existem vidas, histórias e comunidades que dependem da tecnologia. Nossa responsabilidade vai além da proteção técnica: assumimos o compromisso de preservar a confiança digital que sustenta relacionamentos, inovações e o progresso da sociedade.',
     },
   ];
 
