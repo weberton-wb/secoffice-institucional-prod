@@ -107,14 +107,22 @@ const AboutSection = () => {
             </p>
 
             {/* Company Stats */}
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
               <div className="text-center p-4 glass rounded-lg">
-                <div className="text-3xl font-bold text-primary mb-2">100+</div>
-                <div className="text-sm text-muted-foreground">Clientes Protegidos</div>
+                <div className="text-3xl font-bold text-primary mb-2">500+</div>
+                <div className="text-sm text-muted-foreground">Clientes Atendidos</div>
               </div>
               <div className="text-center p-4 glass rounded-lg">
                 <div className="text-3xl font-bold text-primary mb-2">24/7</div>
-                <div className="text-sm text-muted-foreground">Monitoramento SOC</div>
+                <div className="text-sm text-muted-foreground">SOC Monitoramento</div>
+              </div>
+              <div className="text-center p-4 glass rounded-lg">
+                <div className="text-3xl font-bold text-primary mb-2">99.9%</div>
+                <div className="text-sm text-muted-foreground">Uptime</div>
+              </div>
+              <div className="text-center p-4 glass rounded-lg">
+                <div className="text-3xl font-bold text-primary mb-2">15+</div>
+                <div className="text-sm text-muted-foreground">Anos Experiência</div>
               </div>
             </div>
           </div>
@@ -136,46 +144,15 @@ const AboutSection = () => {
           </div>
         </div>
 
-        {/* Values */}
-        <div className="mt-20">
-          <h3 className="text-heading text-center mb-12 fade-in-up animate">Nossos Valores</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {values.slice(0, 4).map((value, index) => {
-              const Icon = value.icon;
-              return (
-                <div
-                  key={index}
-                  className="text-center fade-in-up animate"
-                  style={{ animationDelay: `${0.1 * index}s` }}
-                >
-                  <div className="glass rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                    <Icon className="w-8 h-8 text-primary" />
-                  </div>
-                  <h4 className="text-lg font-semibold mb-4">{value.title}</h4>
-                  <p className="text-muted-foreground text-sm">{value.description}</p>
-                </div>
-              );
-            })}
-          </div>
-          
-          {/* Second row of values */}
-          <div className="grid md:grid-cols-3 gap-8 mt-8 max-w-4xl mx-auto">
-            {values.slice(4).map((value, index) => {
-              const Icon = value.icon;
-              return (
-                <div
-                  key={index + 4}
-                  className="text-center fade-in-up animate"
-                  style={{ animationDelay: `${0.1 * (index + 4)}s` }}
-                >
-                  <div className="glass rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                    <Icon className="w-8 h-8 text-primary" />
-                  </div>
-                  <h4 className="text-lg font-semibold mb-4">{value.title}</h4>
-                  <p className="text-muted-foreground text-sm">{value.description}</p>
-                </div>
-              );
-            })}
+        {/* Call to Action */}
+        <div className="text-center mt-20">
+          <div className="fade-in-up animate">
+            <a
+              href="/quem-somos"
+              className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg font-semibold transition-colors"
+            >
+              Saiba Mais Sobre Nós
+            </a>
           </div>
         </div>
       </div>
