@@ -91,9 +91,9 @@ const Footer = () => {
                 <Link to="/acoes-ofensivas" className="block text-accent-foreground/80 hover:text-primary transition-colors duration-300 text-sm red-line">
                   Teste de Penetração
                 </Link>
-                <div className="text-accent-foreground/80 text-sm">
-                  Gerenciamento de Firewall
-                </div>
+                <Link to="/re-sell" className="block text-accent-foreground/80 hover:text-primary transition-colors duration-300 text-sm red-line">
+                  Re-Sell - Revenda Autorizada
+                </Link>
                 <div className="text-accent-foreground/80 text-sm">
                   Monitoramento SOC 24/7
                 </div>

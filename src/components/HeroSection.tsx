@@ -11,13 +11,11 @@ const HeroSection = () => {
     }
   };
   return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url(${heroBackground})`,
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.15)), url(${heroBackground})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center center',
     backgroundAttachment: 'fixed'
   }}>
-      {/* Animated Hexagon Pattern */}
-      <div className="absolute inset-0 hexagon-grid opacity-20"></div>
 
       <div className="container mx-auto px-6 text-center relative z-10 pt-24 md:pt-28">
         <div className="max-w-5xl mx-auto">
@@ -38,7 +36,7 @@ const HeroSection = () => {
           </p>
 
           {/* Key Differentiators */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 fade-in-up animate" style={{
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12 fade-in-up animate" style={{
           animationDelay: '0.4s'
         }}>
             <div className="glass rounded-lg p-4 text-center px-[16px]">
