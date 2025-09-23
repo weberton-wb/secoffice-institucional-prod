@@ -2,6 +2,7 @@ import { Shield, Target, Eye, Heart, Users, Zap, Lightbulb } from 'lucide-react'
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import teamTrust from '@/assets/team-trust.jpg';
+import aboutHeroBg from '@/assets/about-hero-bg.png';
 import { Button } from '@/components/ui/button';
 
 const About = () => {
@@ -55,8 +56,17 @@ const About = () => {
       <Navigation />
       <main>
         {/* Hero Section */}
-        <section className="py-32 bg-gradient-primary text-white">
-          <div className="container mx-auto px-6">
+        <section 
+          className="py-32 text-white relative overflow-hidden"
+          style={{
+            backgroundImage: `url(${aboutHeroBg})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="container mx-auto px-6 relative z-10">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8">
                 Quem Somos
