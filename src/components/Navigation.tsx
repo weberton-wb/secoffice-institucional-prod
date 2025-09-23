@@ -67,7 +67,7 @@ const Navigation = () => {
                 <Link
                   key={item.id}
                   to={item.path}
-                  className="relative text-foreground hover:text-primary transition-colors duration-300 font-medium red-line"
+                  className="relative text-white hover:text-primary transition-colors duration-300 font-semibold red-line"
                 >
                   {item.label}
                 </Link>
@@ -75,7 +75,7 @@ const Navigation = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="relative text-foreground hover:text-primary transition-colors duration-300 font-medium red-line"
+                  className="relative text-white hover:text-primary transition-colors duration-300 font-semibold red-line"
                 >
                   {item.label}
                 </button>
