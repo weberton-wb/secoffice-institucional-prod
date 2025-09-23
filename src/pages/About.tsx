@@ -4,67 +4,54 @@ import Footer from '@/components/Footer';
 import teamTrust from '@/assets/team-trust.jpg';
 import aboutHeroBg from '@/assets/about-hero-bg.png';
 import { Button } from '@/components/ui/button';
-
 const About = () => {
-  const values = [
-    {
-      icon: Shield,
-      title: 'Transparência e Ética',
-      description: 'Atuamos com integridade, clareza e responsabilidade em todos os nossos processos. Entendemos que proteger dados e negócios exige não apenas tecnologia avançada, mas também caráter sólido e princípios éticos inabaláveis. Nossa transparência se reflete na comunicação clara sobre riscos, soluções e resultados.',
-    },
-    {
-      icon: Heart,
-      title: 'Obsessão pelo Cliente',
-      description: 'Não medimos esforços para antecipar e superar necessidades, entregando mais que soluções técnicas: proporcionamos tranquilidade e confiança para inovar. Cada cliente é único, e nossa abordagem personalizada garante que suas necessidades específicas sejam atendidas com excelência.',
-    },
-    {
-      icon: Target,
-      title: 'Excelência Técnica',
-      description: 'Buscamos continuamente o mais alto nível de especialização e práticas modernas em segurança cibernética. Para nós, excelência não é uma meta distante — é o padrão diário que aplicamos em cada projeto, certificação e implementação. Investimos constantemente em capacitação e tecnologia de ponta.',
-    },
-    {
-      icon: Eye,
-      title: 'Responsabilidade Digital',
-      description: 'Protegemos negócios sabendo que por trás deles existem vidas, histórias e comunidades que dependem da tecnologia. Nossa responsabilidade vai além da proteção técnica: assumimos o compromisso de preservar a confiança digital que sustenta relacionamentos, inovações e o progresso da sociedade.',
-    },
-    {
-      icon: Zap,
-      title: 'Proatividade',
-      description: 'Atuamos de forma preventiva, antecipando riscos e propondo soluções antes que problemas aconteçam. Nossa filosofia é estar sempre um passo à frente das ameaças, utilizando inteligência de mercado, análise preditiva e monitoramento contínuo para proteger nossos clientes.',
-    },
-    {
-      icon: Users,
-      title: 'Colaboração',
-      description: 'Trabalhamos lado a lado com clientes e parceiros, construindo um ecossistema de confiança coletiva. Acreditamos que a segurança verdadeira surge da união de esforços, conhecimentos e experiências. Nossa rede de parceiros estratégicos amplia nossas capacidades e oferece soluções completas.',
-    },
-    {
-      icon: Lightbulb,
-      title: 'Inovação Contínua',
-      description: 'Evoluímos junto com as transformações tecnológicas, aplicando inovação para transformar segurança em habilitador da inovação dos nossos clientes. Mantemos-nos na vanguarda das tendências tecnológicas, sempre explorando novas ferramentas e metodologias para oferecer soluções diferenciadas.',
-    },
-  ];
-
+  const values = [{
+    icon: Shield,
+    title: 'Transparência e Ética',
+    description: 'Atuamos com integridade, clareza e responsabilidade em todos os nossos processos. Entendemos que proteger dados e negócios exige não apenas tecnologia avançada, mas também caráter sólido e princípios éticos inabaláveis. Nossa transparência se reflete na comunicação clara sobre riscos, soluções e resultados.'
+  }, {
+    icon: Heart,
+    title: 'Obsessão pelo Cliente',
+    description: 'Não medimos esforços para antecipar e superar necessidades, entregando mais que soluções técnicas: proporcionamos tranquilidade e confiança para inovar. Cada cliente é único, e nossa abordagem personalizada garante que suas necessidades específicas sejam atendidas com excelência.'
+  }, {
+    icon: Target,
+    title: 'Excelência Técnica',
+    description: 'Buscamos continuamente o mais alto nível de especialização e práticas modernas em segurança cibernética. Para nós, excelência não é uma meta distante — é o padrão diário que aplicamos em cada projeto, certificação e implementação. Investimos constantemente em capacitação e tecnologia de ponta.'
+  }, {
+    icon: Eye,
+    title: 'Responsabilidade Digital',
+    description: 'Protegemos negócios sabendo que por trás deles existem vidas, histórias e comunidades que dependem da tecnologia. Nossa responsabilidade vai além da proteção técnica: assumimos o compromisso de preservar a confiança digital que sustenta relacionamentos, inovações e o progresso da sociedade.'
+  }, {
+    icon: Zap,
+    title: 'Proatividade',
+    description: 'Atuamos de forma preventiva, antecipando riscos e propondo soluções antes que problemas aconteçam. Nossa filosofia é estar sempre um passo à frente das ameaças, utilizando inteligência de mercado, análise preditiva e monitoramento contínuo para proteger nossos clientes.'
+  }, {
+    icon: Users,
+    title: 'Colaboração',
+    description: 'Trabalhamos lado a lado com clientes e parceiros, construindo um ecossistema de confiança coletiva. Acreditamos que a segurança verdadeira surge da união de esforços, conhecimentos e experiências. Nossa rede de parceiros estratégicos amplia nossas capacidades e oferece soluções completas.'
+  }, {
+    icon: Lightbulb,
+    title: 'Inovação Contínua',
+    description: 'Evoluímos junto com as transformações tecnológicas, aplicando inovação para transformar segurança em habilitador da inovação dos nossos clientes. Mantemos-nos na vanguarda das tendências tecnológicas, sempre explorando novas ferramentas e metodologias para oferecer soluções diferenciadas.'
+  }];
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Navigation />
       <main>
         {/* Hero Section */}
-        <section 
-          className="py-32 text-white relative overflow-hidden"
-          style={{
-            backgroundImage: `url(${aboutHeroBg})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
-          }}
-        >
+        <section className="py-32 text-white relative overflow-hidden" style={{
+        backgroundImage: `url(${aboutHeroBg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}>
           <div className="absolute inset-0 bg-black/40"></div>
           <div className="container mx-auto px-6 relative z-10">
             <div className="text-center max-w-4xl mx-auto">
@@ -201,11 +188,7 @@ const About = () => {
               {/* Team Image */}
               <div>
                 <div className="relative rounded-2xl overflow-hidden shadow-hard">
-                  <img
-                    src={teamTrust}
-                    alt="SecOffice expert team working in modern cybersecurity environment"
-                    className="w-full h-auto object-cover"
-                  />
+                  <img src={teamTrust} alt="SecOffice expert team working in modern cybersecurity environment" className="w-full h-auto object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   <div className="absolute bottom-8 left-8 text-white">
                     <h3 className="text-2xl font-bold mb-3">Equipe Especialista</h3>
@@ -232,12 +215,8 @@ const About = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 justify-items-center">
               {values.map((value, index) => {
-                const Icon = value.icon;
-                return (
-                  <div
-                    key={index}
-                    className="glass p-8 rounded-xl hover:shadow-hard transition-all duration-300"
-                  >
+              const Icon = value.icon;
+              return <div key={index} className="glass p-8 rounded-xl hover:shadow-hard transition-all duration-300 mx-0">
                     <div className="flex items-center mb-6">
                       <div className="glass rounded-full w-16 h-16 flex items-center justify-center mr-4">
                         <Icon className="w-8 h-8 text-primary" />
@@ -245,9 +224,8 @@ const About = () => {
                       <h3 className="text-xl font-bold">{value.title}</h3>
                     </div>
                     <p className="text-muted-foreground leading-relaxed">{value.description}</p>
-                  </div>
-                );
-              })}
+                  </div>;
+            })}
             </div>
           </div>
         </section>
@@ -261,19 +239,10 @@ const About = () => {
                 Descubra como podemos proteger e potencializar o crescimento do seu negócio com nossas soluções de segurança cibernética.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
-                <Button 
-                  size="lg" 
-                  onClick={() => scrollToSection('contact')}
-                  className="px-8"
-                >
+                <Button size="lg" onClick={() => scrollToSection('contact')} className="px-8">
                   Entre em Contato
                 </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  onClick={() => window.location.href = '/'}
-                  className="px-8"
-                >
+                <Button variant="outline" size="lg" onClick={() => window.location.href = '/'} className="px-8">
                   Voltar ao Início
                 </Button>
               </div>
@@ -282,8 +251,6 @@ const About = () => {
         </section>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default About;
