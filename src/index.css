@@ -311,7 +311,7 @@
   /* Navigation Blur */
   .nav-blur {
     backdrop-filter: blur(20px) saturate(180%);
-    background-color: hsl(var(--background) / 0.8);
+    background-color: hsl(var(--brand-gray-dark) / 0.9);
     border-bottom: 1px solid hsl(var(--border) / 0.3);
   }
 }
