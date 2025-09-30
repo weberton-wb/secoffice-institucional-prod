@@ -12,14 +12,22 @@ const Auth = () => {
   const { toast } = useToast();
 
   useEffect(() => {
-    // Verificar se já está logado
-    const checkUser = async () => {
-      const { data: { user } } = await supabase.auth.getUser();
-      if (user) {
+    // Listener de auth e verificação inicial
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (session?.user) {
         navigate("/admin");
       }
+    });
+
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session?.user) {
+        navigate("/admin");
+      }
+    });
+
+    return () => {
+      subscription.unsubscribe();
     };
-    checkUser();
   }, [navigate]);
 
   const handleMicrosoftLogin = async () => {
@@ -29,7 +37,7 @@ const Auth = () => {
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'azure',
         options: {
-          redirectTo: `${window.location.origin}/admin`,
+          redirectTo: `${window.location.origin}`,
           scopes: 'email profile openid'
         }
       });
