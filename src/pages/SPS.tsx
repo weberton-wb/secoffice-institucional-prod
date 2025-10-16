@@ -1,24 +1,26 @@
-import { Monitor, Shield, AlertTriangle, Clock, Users, ArrowRight } from 'lucide-react';
+import { FileCheck, Target, CheckCircle, Award, Users, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
 
-const MSSP = () => {
+const SPS = () => {
   const benefits = [
-    'Monitoramento 24x7x365 ininterrupto',
-    'Detecção e resposta a incidentes em tempo real',
-    'Inteligência de ameaças atualizada',
-    'Correlação avançada de eventos de segurança',
-    'Relatórios executivos e técnicos detalhados',
-    'Gestão contínua de vulnerabilidades'
+    'Escopo claramente definido desde o início',
+    'Preço fixo acordado previamente',
+    'Prazo de entrega garantido',
+    'Metodologia estruturada e documentada',
+    'Entregas técnicas objetivas e mensuráveis',
+    'Conformidade com padrões internacionais'
   ];
 
   const solutions = [
-    { name: 'SOC Operation', description: 'Centro de operações de segurança 24/7' },
-    { name: 'Threat Intelligence', description: 'Inteligência contra ameaças avançadas' },
-    { name: 'SIEM Management', description: 'Gerenciamento de eventos de segurança' },
-    { name: 'Compliance Monitoring', description: 'Monitoramento de conformidade contínuo' }
+    { name: 'Pentest', description: 'Testes de penetração completos' },
+    { name: 'Risk Assessment', description: 'Avaliação de riscos detalhada' },
+    { name: 'ISO 27001', description: 'Adequação à norma ISO 27001' },
+    { name: 'SOC 2', description: 'Preparação para certificação SOC 2' },
+    { name: 'LGPD', description: 'Adequação à Lei Geral de Proteção de Dados' },
+    { name: 'Security Architecture', description: 'Arquitetura de segurança corporativa' }
   ];
 
   return (
@@ -42,7 +44,7 @@ const MSSP = () => {
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbPage>MSSP</BreadcrumbPage>
+              <BreadcrumbPage>SPS</BreadcrumbPage>
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
@@ -54,17 +56,17 @@ const MSSP = () => {
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center mb-6 fade-in-up animate">
               <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mr-6">
-                <Monitor className="w-10 h-10 text-primary" />
+                <FileCheck className="w-10 h-10 text-primary" />
               </div>
               <div>
-                <h1 className="text-display mb-2">MSSP</h1>
-                <p className="text-xl text-primary font-medium">Managed Security Services Provider</p>
+                <h1 className="text-display mb-2">SPS</h1>
+                <p className="text-xl text-primary font-medium">SecOffice ProService</p>
               </div>
             </div>
             
             <p className="text-subheading text-muted-foreground mb-8 fade-in-up animate" style={{animationDelay: '0.1s'}}>
-              Monitoramento e resposta 24x7. Inteligência de ameaças, correlação de eventos, 
-              relatórios e gestão contínua operada pelo SOC SecOffice.
+              Projetos fechados com escopo definido e preço fixo. Entregas previsíveis, 
+              voltadas a resultados técnicos objetivos.
             </p>
           </div>
         </div>
@@ -75,10 +77,10 @@ const MSSP = () => {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {[
-              { icon: Clock, title: '24x7x365', desc: 'Monitoramento contínuo' },
-              { icon: Shield, title: 'Proteção', desc: 'Defesa ativa contra ameaças' },
-              { icon: AlertTriangle, title: 'Detecção', desc: 'Identificação em tempo real' },
-              { icon: Users, title: 'SOC Team', desc: 'Analistas especializados' }
+              { icon: Target, title: 'Escopo Fixo', desc: 'Definição clara de entregas' },
+              { icon: CheckCircle, title: 'Preço Acordado', desc: 'Investimento previsível' },
+              { icon: Award, title: 'Qualidade', desc: 'Padrões internacionais' },
+              { icon: Users, title: 'Especialistas', desc: 'Time experiente e certificado' }
             ].map((feature, index) => (
               <div 
                 key={index} 
@@ -101,16 +103,16 @@ const MSSP = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="mb-12 fade-in-up animate">
-              <h2 className="text-heading mb-6">O que é MSSP?</h2>
+              <h2 className="text-heading mb-6">O que é SPS?</h2>
               <p className="text-body mb-4">
-                O MSSP (Managed Security Services Provider) é um serviço completo de segurança gerenciada 
-                que oferece monitoramento contínuo 24x7, detecção e resposta a incidentes de segurança 
-                operado por nosso SOC (Security Operations Center).
+                O SPS (SecOffice ProService) é o modelo ideal para empresas que buscam projetos 
+                de segurança com escopo bem definido, prazo determinado e preço fixo. Cada projeto 
+                é estruturado com objetivos claros e entregas técnicas mensuráveis.
               </p>
               <p className="text-body">
-                Com uma equipe dedicada de analistas de segurança, tecnologias de ponta e processos 
-                maduros, garantimos proteção constante para sua infraestrutura, aplicações e dados 
-                contra ameaças cibernéticas avançadas.
+                Desde testes de penetração e avaliações de risco até adequações a normas como 
+                ISO 27001, SOC 2 e LGPD, garantimos resultados previsíveis com a qualidade e 
+                profundidade técnica que sua organização precisa.
               </p>
             </div>
 
@@ -129,7 +131,7 @@ const MSSP = () => {
 
             {/* Related Solutions */}
             <div className="mb-12 fade-in-up animate">
-              <h3 className="text-2xl font-semibold mb-6">Soluções Relacionadas</h3>
+              <h3 className="text-2xl font-semibold mb-6">Projetos Oferecidos</h3>
               <div className="grid md:grid-cols-2 gap-4">
                 {solutions.map((solution, index) => (
                   <div key={index} className="p-6 bg-surface/50 rounded-xl border border-border/50 hover:border-primary/50 transition-colors">
@@ -156,4 +158,4 @@ const MSSP = () => {
   );
 };
 
-export default MSSP;
+export default SPS;

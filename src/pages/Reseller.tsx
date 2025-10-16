@@ -1,24 +1,35 @@
-import { Monitor, Shield, AlertTriangle, Clock, Users, ArrowRight } from 'lucide-react';
+import { ShoppingCart, Shield, Award, Headphones, Users, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
 
-const MSSP = () => {
+const Reseller = () => {
   const benefits = [
-    'Monitoramento 24x7x365 ininterrupto',
-    'Detecção e resposta a incidentes em tempo real',
-    'Inteligência de ameaças atualizada',
-    'Correlação avançada de eventos de segurança',
-    'Relatórios executivos e técnicos detalhados',
-    'Gestão contínua de vulnerabilidades'
+    'Parceria técnica com fabricantes líderes de mercado',
+    'Consultoria especializada na escolha de soluções',
+    'Implantação completa e integração com ambiente existente',
+    'Suporte técnico contínuo pós-venda',
+    'Treinamento e capacitação de equipes',
+    'Condições comerciais competitivas'
   ];
 
-  const solutions = [
-    { name: 'SOC Operation', description: 'Centro de operações de segurança 24/7' },
-    { name: 'Threat Intelligence', description: 'Inteligência contra ameaças avançadas' },
-    { name: 'SIEM Management', description: 'Gerenciamento de eventos de segurança' },
-    { name: 'Compliance Monitoring', description: 'Monitoramento de conformidade contínuo' }
+  const partners = [
+    { 
+      name: 'Fortinet', 
+      description: 'Firewalls, SD-WAN, Zero Trust, e soluções de segurança de rede completas',
+      category: 'Network Security'
+    },
+    { 
+      name: 'CrowdStrike', 
+      description: 'Proteção de endpoints, EDR/XDR, threat intelligence e resposta a incidentes',
+      category: 'Endpoint Security'
+    },
+    { 
+      name: 'AWS Security', 
+      description: 'Soluções de segurança cloud, compliance, WAF, Shield e GuardDuty',
+      category: 'Cloud Security'
+    }
   ];
 
   return (
@@ -42,7 +53,7 @@ const MSSP = () => {
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbPage>MSSP</BreadcrumbPage>
+              <BreadcrumbPage>Reseller</BreadcrumbPage>
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
@@ -54,17 +65,17 @@ const MSSP = () => {
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center mb-6 fade-in-up animate">
               <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mr-6">
-                <Monitor className="w-10 h-10 text-primary" />
+                <ShoppingCart className="w-10 h-10 text-primary" />
               </div>
               <div>
-                <h1 className="text-display mb-2">MSSP</h1>
-                <p className="text-xl text-primary font-medium">Managed Security Services Provider</p>
+                <h1 className="text-display mb-2">Reseller</h1>
+                <p className="text-xl text-primary font-medium">Revenda Estratégica</p>
               </div>
             </div>
             
             <p className="text-subheading text-muted-foreground mb-8 fade-in-up animate" style={{animationDelay: '0.1s'}}>
-              Monitoramento e resposta 24x7. Inteligência de ameaças, correlação de eventos, 
-              relatórios e gestão contínua operada pelo SOC SecOffice.
+              Revenda de soluções Fortinet, CrowdStrike e AWS. Inclui implantação, 
+              integração e suporte com parceria técnica e acompanhamento pós-venda.
             </p>
           </div>
         </div>
@@ -75,10 +86,10 @@ const MSSP = () => {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {[
-              { icon: Clock, title: '24x7x365', desc: 'Monitoramento contínuo' },
-              { icon: Shield, title: 'Proteção', desc: 'Defesa ativa contra ameaças' },
-              { icon: AlertTriangle, title: 'Detecção', desc: 'Identificação em tempo real' },
-              { icon: Users, title: 'SOC Team', desc: 'Analistas especializados' }
+              { icon: Shield, title: 'Soluções Líderes', desc: 'Fabricantes reconhecidos' },
+              { icon: Award, title: 'Certificação', desc: 'Parceiros oficiais' },
+              { icon: Headphones, title: 'Suporte', desc: 'Acompanhamento contínuo' },
+              { icon: Users, title: 'Consultoria', desc: 'Expertise técnica' }
             ].map((feature, index) => (
               <div 
                 key={index} 
@@ -101,17 +112,36 @@ const MSSP = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="mb-12 fade-in-up animate">
-              <h2 className="text-heading mb-6">O que é MSSP?</h2>
+              <h2 className="text-heading mb-6">Revenda Estratégica</h2>
               <p className="text-body mb-4">
-                O MSSP (Managed Security Services Provider) é um serviço completo de segurança gerenciada 
-                que oferece monitoramento contínuo 24x7, detecção e resposta a incidentes de segurança 
-                operado por nosso SOC (Security Operations Center).
+                Como parceiros oficiais dos principais fabricantes de soluções de cibersegurança, 
+                oferecemos não apenas a revenda de tecnologias de ponta, mas uma consultoria 
+                completa para escolha, implantação e operação das soluções mais adequadas ao 
+                seu negócio.
               </p>
               <p className="text-body">
-                Com uma equipe dedicada de analistas de segurança, tecnologias de ponta e processos 
-                maduros, garantimos proteção constante para sua infraestrutura, aplicações e dados 
-                contra ameaças cibernéticas avançadas.
+                Nossa equipe técnica certificada garante que a integração com seu ambiente seja 
+                perfeita, com configuração otimizada, treinamento de equipes e suporte contínuo 
+                para maximizar o retorno do investimento.
               </p>
+            </div>
+
+            {/* Partners */}
+            <div className="mb-12 fade-in-up animate">
+              <h3 className="text-2xl font-semibold mb-6">Parceiros Estratégicos</h3>
+              <div className="space-y-4">
+                {partners.map((partner, index) => (
+                  <div key={index} className="p-6 bg-surface/50 rounded-xl border border-border/50 hover:border-primary/50 transition-colors">
+                    <div className="flex items-start justify-between mb-2">
+                      <h4 className="text-xl font-semibold">{partner.name}</h4>
+                      <span className="text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
+                        {partner.category}
+                      </span>
+                    </div>
+                    <p className="text-muted-foreground">{partner.description}</p>
+                  </div>
+                ))}
+              </div>
             </div>
 
             {/* Benefits */}
@@ -122,19 +152,6 @@ const MSSP = () => {
                   <div key={index} className="flex items-start">
                     <div className="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></div>
                     <span className="text-body">{benefit}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Related Solutions */}
-            <div className="mb-12 fade-in-up animate">
-              <h3 className="text-2xl font-semibold mb-6">Soluções Relacionadas</h3>
-              <div className="grid md:grid-cols-2 gap-4">
-                {solutions.map((solution, index) => (
-                  <div key={index} className="p-6 bg-surface/50 rounded-xl border border-border/50 hover:border-primary/50 transition-colors">
-                    <h4 className="font-semibold mb-2">{solution.name}</h4>
-                    <p className="text-sm text-muted-foreground">{solution.description}</p>
                   </div>
                 ))}
               </div>
@@ -156,4 +173,4 @@ const MSSP = () => {
   );
 };
 
-export default MSSP;
+export default Reseller;

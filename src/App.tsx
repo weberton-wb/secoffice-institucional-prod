@@ -11,9 +11,8 @@ import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 import SECaaS from "./pages/SECaaS";
 import MSSP from "./pages/MSSP";
-import SRT from "./pages/SRT";
-import AcoesOfensivas from "./pages/AcoesOfensivas";
-import ReSell from "./pages/ReSell";
+import SPS from "./pages/SPS";
+import Reseller from "./pages/Reseller";
 
 const queryClient = new QueryClient();
 
@@ -29,11 +28,10 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/admin" element={<Admin />} />
-          <Route path="/SECaaS" element={<SECaaS />} />
-          <Route path="/MSSP" element={<MSSP />} />
-          <Route path="/SRT" element={<SRT />} />
-          <Route path="/acoes-ofensivas" element={<AcoesOfensivas />} />
-          <Route path="/re-sell" element={<ReSell />} />
+          <Route path="/secaas" element={<SECaaS />} />
+          <Route path="/mssp" element={<MSSP />} />
+          <Route path="/sps" element={<SPS />} />
+          <Route path="/reseller" element={<Reseller />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
