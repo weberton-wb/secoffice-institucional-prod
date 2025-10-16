@@ -12,6 +12,16 @@ import { useToast } from "@/hooks/use-toast";
 import { Loader2, Plus, Edit, Trash2, LogOut } from "lucide-react";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
+import { z } from "zod";
+import DOMPurify from "dompurify";
+
+const blogPostSchema = z.object({
+  title: z.string().trim().min(1, "Título é obrigatório").max(200, "Título muito longo"),
+  content: z.string().trim().min(1, "Conteúdo é obrigatório").max(50000, "Conteúdo muito longo"),
+  excerpt: z.string().trim().max(500, "Resumo muito longo").optional().or(z.literal("")),
+  featured_image: z.string().trim().url("URL inválida").optional().or(z.literal("")),
+  published: z.boolean()
+});
 
 interface BlogPost {
   id: string;
@@ -86,9 +96,26 @@ const Admin = () => {
     setSubmitting(true);
 
     try {
-      const slug = generateSlug(formData.title);
+      // Validate input
+      const validation = blogPostSchema.safeParse(formData);
+      if (!validation.success) {
+        const firstError = validation.error.errors[0];
+        toast({
+          title: "Erro de validação",
+          description: firstError.message,
+          variant: "destructive",
+        });
+        return;
+      }
+
+      const validatedData = validation.data;
+      const slug = generateSlug(validatedData.title);
       const postData = {
-        ...formData,
+        title: validatedData.title,
+        content: validatedData.content,
+        excerpt: validatedData.excerpt || "",
+        featured_image: validatedData.featured_image || null,
+        published: validatedData.published,
         slug,
         author_id: user.id
       };
@@ -316,9 +343,12 @@ const Admin = () => {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-muted-foreground line-clamp-2">
-                    {post.excerpt || post.content.substring(0, 150) + "..."}
-                  </p>
+                  <p 
+                    className="text-sm text-muted-foreground line-clamp-2"
+                    dangerouslySetInnerHTML={{ 
+                      __html: DOMPurify.sanitize(post.excerpt || post.content.substring(0, 150) + "...") 
+                    }}
+                  />
                 </CardContent>
               </Card>
             ))
