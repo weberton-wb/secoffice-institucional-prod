@@ -3,11 +3,16 @@ import { supabase } from "@/integrations/supabase/client";
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
 
 const Auth = () => {
   const [loading, setLoading] = useState(false);
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const { toast } = useToast();
 
@@ -30,25 +35,39 @@ const Auth = () => {
     };
   }, [navigate]);
 
-  const handleMicrosoftLogin = async () => {
+  const handleAuth = async (e: React.FormEvent) => {
+    e.preventDefault();
     setLoading(true);
 
     try {
-      const { error } = await supabase.auth.signInWithOAuth({
-        provider: 'azure',
-        options: {
-          redirectTo: `${window.location.origin}`,
-          scopes: 'email profile openid'
-        }
-      });
-
-      if (error) throw error;
+      if (isSignUp) {
+        const { error } = await supabase.auth.signUp({
+          email,
+          password,
+          options: {
+            emailRedirectTo: `${window.location.origin}`
+          }
+        });
+        if (error) throw error;
+        
+        toast({
+          title: "Conta criada com sucesso!",
+          description: "Verifique seu email para confirmar a conta.",
+        });
+      } else {
+        const { error } = await supabase.auth.signInWithPassword({
+          email,
+          password,
+        });
+        if (error) throw error;
+      }
     } catch (error: any) {
       toast({
-        title: "Erro no login",
+        title: isSignUp ? "Erro ao criar conta" : "Erro no login",
         description: error.message,
         variant: "destructive",
       });
+    } finally {
       setLoading(false);
     }
   };
@@ -59,36 +78,62 @@ const Auth = () => {
         <CardHeader className="text-center">
           <CardTitle className="text-2xl">Acesso Administrativo</CardTitle>
           <CardDescription>
-            Entre com sua conta Microsoft/Office 365 para gerenciar o blog
+            {isSignUp ? "Crie sua conta para gerenciar o blog" : "Entre com seu email e senha"}
           </CardDescription>
         </CardHeader>
-        <CardContent className="flex flex-col items-center space-y-4 pt-6">
-          <Button 
-            onClick={handleMicrosoftLogin} 
-            className="w-full"
-            size="lg"
-            disabled={loading}
-          >
-            {loading ? (
-              <>
-                <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                Conectando...
-              </>
-            ) : (
-              <>
-                <svg className="mr-2 h-5 w-5" viewBox="0 0 23 23" fill="none">
-                  <rect x="1" y="1" width="10" height="10" fill="#F25022"/>
-                  <rect x="12" y="1" width="10" height="10" fill="#7FBA00"/>
-                  <rect x="1" y="12" width="10" height="10" fill="#00A4EF"/>
-                  <rect x="12" y="12" width="10" height="10" fill="#FFB900"/>
-                </svg>
-                Entrar com Microsoft
-              </>
-            )}
-          </Button>
-          <p className="text-xs text-muted-foreground text-center">
-            Apenas contas corporativas Microsoft/Office 365 autorizadas
-          </p>
+        <CardContent className="pt-6">
+          <form onSubmit={handleAuth} className="space-y-4">
+            <div className="space-y-2">
+              <Label htmlFor="email">Email</Label>
+              <Input
+                id="email"
+                type="email"
+                placeholder="seu@email.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                disabled={loading}
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="password">Senha</Label>
+              <Input
+                id="password"
+                type="password"
+                placeholder="••••••••"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                disabled={loading}
+                minLength={6}
+              />
+            </div>
+            <Button 
+              type="submit"
+              className="w-full"
+              size="lg"
+              disabled={loading}
+            >
+              {loading ? (
+                <>
+                  <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                  {isSignUp ? "Criando conta..." : "Entrando..."}
+                </>
+              ) : (
+                isSignUp ? "Criar Conta" : "Entrar"
+              )}
+            </Button>
+          </form>
+          <div className="mt-4 text-center">
+            <Button
+              variant="link"
+              onClick={() => setIsSignUp(!isSignUp)}
+              disabled={loading}
+              className="text-sm"
+            >
+              {isSignUp ? "Já tem uma conta? Entre aqui" : "Não tem conta? Cadastre-se"}
+            </Button>
+          </div>
         </CardContent>
       </Card>
     </div>
