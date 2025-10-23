@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Loader2 } from "lucide-react";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 interface BlogPost {
   id: string;
@@ -53,7 +56,8 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-4 py-16">
+      <Navigation />
+      <div className="container mx-auto px-4 py-16 mt-20">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-foreground mb-4">Blog</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -90,15 +94,19 @@ const Blog = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <button className="text-primary hover:underline font-medium">
+                  <Link 
+                    to={`/blog/${post.slug}`}
+                    className="text-primary hover:underline font-medium inline-block"
+                  >
                     Ler mais →
-                  </button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
           </div>
         )}
       </div>
+      <Footer />
     </div>
   );
 };

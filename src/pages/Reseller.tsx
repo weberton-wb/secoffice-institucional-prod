@@ -1,10 +1,32 @@
 import { ShoppingCart, Shield, Award, Headphones, Users, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
 
 const Reseller = () => {
+  const navigate = useNavigate();
+  
+  const handleContactClick = () => {
+    navigate('/');
+    setTimeout(() => {
+      const element = document.getElementById('contact');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
+  };
+
+  const handleProductsClick = () => {
+    navigate('/');
+    setTimeout(() => {
+      const element = document.getElementById('products');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
+  };
+
   const benefits = [
     'Parceria técnica com fabricantes líderes de mercado',
     'Consultoria especializada na escolha de soluções',
@@ -48,7 +70,9 @@ const Reseller = () => {
             <BreadcrumbSeparator />
             <BreadcrumbItem>
               <BreadcrumbLink asChild>
-                <Link to="/#products">Produtos</Link>
+                <button onClick={handleProductsClick} className="hover:text-primary transition-colors">
+                  Produtos
+                </button>
               </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
@@ -159,10 +183,10 @@ const Reseller = () => {
 
             {/* CTA */}
             <div className="text-center fade-in-up animate">
-              <Link to="/#contact" className="btn-hero inline-flex items-center">
+              <button onClick={handleContactClick} className="btn-hero inline-flex items-center">
                 Fale com um Especialista
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
+              </button>
             </div>
           </div>
         </div>

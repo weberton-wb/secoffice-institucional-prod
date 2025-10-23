@@ -1,10 +1,13 @@
 import { Shield, Target, Eye, Heart, Users, Zap, Lightbulb } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import teamTrust from '@/assets/team-trust.jpg';
 import aboutHeroBg from '@/assets/about-hero-bg.png';
 import { Button } from '@/components/ui/button';
 const About = () => {
+  const navigate = useNavigate();
+  
   const values = [{
     icon: Shield,
     title: 'Transparência e Ética',
@@ -34,13 +37,17 @@ const About = () => {
     title: 'Inovação Contínua',
     description: 'Evoluímos junto com as transformações tecnológicas, aplicando inovação para transformar segurança em habilitador da inovação dos nossos clientes. Mantemos-nos na vanguarda das tendências tecnológicas, sempre explorando novas ferramentas e metodologias para oferecer soluções diferenciadas.'
   }];
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
+  const handleContactClick = () => {
+    navigate('/');
+    setTimeout(() => {
+      const element = document.getElementById('contact');
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }
+    }, 100);
   };
   return <div className="min-h-screen">
       <Navigation />
@@ -239,10 +246,10 @@ const About = () => {
                 Descubra como podemos proteger e potencializar o crescimento do seu negócio com nossas soluções de segurança cibernética.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
-                <Button size="lg" onClick={() => scrollToSection('contact')} className="px-8">
+                <Button size="lg" onClick={handleContactClick} className="px-8">
                   Entre em Contato
                 </Button>
-                <Button variant="outline" size="lg" onClick={() => window.location.href = '/'} className="px-8">
+                <Button variant="outline" size="lg" onClick={() => navigate('/')} className="px-8">
                   Voltar ao Início
                 </Button>
               </div>

@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import logo from '@/assets/secoffice-logo.png';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,22 +19,29 @@ const Navigation = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
+    // Se não estiver na página inicial, navegar primeiro
+    if (location.pathname !== '/') {
+      navigate('/');
+      // Esperar a navegação completar antes de fazer scroll
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }
     }
     setIsMobileMenuOpen(false);
-  };
-
-  const handleNavClick = (item: any) => {
-    if (item.isRoute) {
-      // Para rotas, não fechar o menu aqui pois será navegação
-      return;
-    }
-    scrollToSection(item.id);
   };
 
   const navItems = [
