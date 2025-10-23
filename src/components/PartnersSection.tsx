@@ -117,20 +117,6 @@ const PartnersSection = () => {
           </div>
         </div>
 
-        {/* Partnership CTA */}
-        <div className="text-center mt-16 fade-in-up animate" style={{ animationDelay: '0.6s' }}>
-          <div className="glass rounded-2xl p-8 max-w-2xl mx-auto">
-            <Award className="w-12 h-12 text-primary mx-auto mb-4" />
-            <h3 className="text-heading mb-4">Expandindo o Ecossistema de Parcerias</h3>
-            <p className="text-muted-foreground mb-6">
-              Continuamente avaliamos e fazemos parcerias com líderes emergentes de segurança 
-              para trazer as soluções de cibersegurança mais inovadoras e eficazes.
-            </p>
-            <button className="btn-hero">
-              Seja Nosso Parceiro
-            </button>
-          </div>
-        </div>
       </div>
     </section>
   );
