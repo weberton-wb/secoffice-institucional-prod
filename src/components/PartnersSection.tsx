@@ -33,8 +33,6 @@ const PartnersSection = () => {
   const additionalPartners = [
     { name: 'AWS', specialty: 'Arquitetura de Segurança na Nuvem', icon: Cloud },
     { name: 'Microsoft', specialty: 'Soluções Empresariais de Segurança', icon: Shield },
-    { name: 'Palo Alto Networks', specialty: 'Segurança de Rede', icon: Shield },
-    { name: 'Splunk', specialty: 'Analytics de Segurança', icon: Eye },
   ];
 
   return (
